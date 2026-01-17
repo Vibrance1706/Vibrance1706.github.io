@@ -1,10 +1,21 @@
+/* ===== Theme Variables ===== */
 :root {
-  --bg: #0f172a;
+  --bg: #020617;
   --card: #111827;
   --text: #e5e7eb;
   --muted: #9ca3af;
   --accent: #38bdf8;
 }
+
+/* Light mode overrides */
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #020617;
+  --muted: #475569;
+  --accent: #0a66c2;
+}
+
 
 * {
   box-sizing: border-box;
@@ -13,10 +24,11 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #020617, #020617);
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  transition: var(--bg) 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -277,4 +289,28 @@ footer {
   .links {
     justify-content: center;
   }
+}
+
+.theme-toggle {
+  margin-left: 1rem;
+  background: var(--card);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+.theme-toggle-fixed {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 1000;
 }
