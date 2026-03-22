@@ -144,7 +144,7 @@ ul li {
 
 
 .skill-group {
-  min-height: 130px;
+  min-height: 170px;
 }
 
 .skill-group .card {
@@ -160,7 +160,7 @@ ul li {
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
 }
 
- .skill-icons {
+ /* .skill-icons {
   position: absolute;
   inset: 0;
   display: flex;
@@ -176,6 +176,32 @@ ul li {
   visibility: hidden;
   pointer-events: none;
   transform: scale(0.95);
+
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+} */
+ .skill-icons {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-content: flex-start;   
+
+  gap: 1rem;
+  padding: 0.8rem;
+
+  background: var(--card);
+  z-index: 5;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.95);
+
+  overflow-y: auto;            
+  max-height: 100%;            
 
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
 }
@@ -322,4 +348,150 @@ footer {
   top: 1.2rem;
   right: 1.2rem;
   z-index: 1000;
+}
+
+.experience-toggle .details.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-hover:hover .skill-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.no-hover:hover .skill-icons {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(248, 250, 252, 0.85);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0.8rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+body {
+  padding-top: 70px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+
+    background: var(--card);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding: 1.5rem 0;
+
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
 }

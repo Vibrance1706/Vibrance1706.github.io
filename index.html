@@ -23,6 +23,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#Education">Education</a></li>
+      <li><a href="#Experience">Experience</a></li>
+      <li><a href="#Skills">Skills</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Certifications">Certifications</a></li>
+    </ul>
+  </div>
+</nav>
+
+    
     <div class="container">
       <button
         id="theme-toggle"
@@ -31,15 +52,19 @@
       >
         🌙
       </button>
-      <header class="me">
+      <header class="me" id="about">
         <div class="me-text">
           <!-- <span class="badge">Computer Science Graduate Student</span> -->
           <h1>Vishal Meenakshi Sundaram</h1>
-          <p>
-            First-year Master of Computer Science student at the University of
-            Ottawa with strong experience in front-end development for
-            AI-powered platforms. Passionate about building secure, scalable,
-            and user-focused web applications using modern frameworks.
+          <p style="text-align: justify">
+            Computer Science graduate student focused on building scalable,
+            data-driven applications. Experienced in Angular (v16–v19),
+            TypeScript, and integrating FastAPI services with AWS DynamoDB for
+            efficient data workflows. Worked on an AI-powered insurance
+            platform, implementing secure authentication (MSAL, ForgeRock) and
+            optimizing UI performance. Familiar with Jenkins-based CI/CD
+            pipelines and neural networks (CNNs, RNNs, LSTMs, TCNs) for
+            time-series and pattern recognition tasks.
           </p>
           <div class="links">
             <a
@@ -60,33 +85,67 @@
         </div>
       </header>
 
-      <section>
-        <h2>Education</h2>
-        <div class="card">
-          <h3>Master of Computer Science</h3>
-          <span>University of Ottawa · GPA: 9.0 / 10 · Sep 2025 - Present</span>
-        </div>
-        <div class="card">
-          <h3>Bachelor of Technology in Computer Science and Engineering</h3>
-          <span
-            >SRM Institute of Science and Technology · GPA: 9.5 / 10 · Sep 2021
-            - Jun 2025</span
-          >
-          <!-- <p>
-            Final Year Project: Real-Time Cryptocurrency Price Prediction using
-            LSTM and XGBoost
-          </p> -->
-        </div>
-        <div class="card">
-          <h3>Foundational Degree in Data Science and Programming</h3>
-          <span>IIT Madras · GPA: 7.9 / 10 · Jan 2021 - Jan 2022</span>
-        </div>
-      </section>
+      <section id="Education">
+  <h2>Education</h2>
 
-      <section>
+  <div class="card">
+    <h3>Master of Computer Science</h3>
+    <span>University of Ottawa · GPA: 9.0 / 10 · Sep 2025 - Present</span>
+
+    <div class="toggle-section">
+      <button class="toggle-btn toggle-section-btn">Show Details ↓</button>
+
+      <div class="toggle-section-content hidden">
+        <p>
+          <b>Relevant Coursework:</b> Machine Learning, Neural Network Algorithms and Architectures,
+          Deep Reinforcement Learning, Advanced Database Management Systems
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+    <span>
+      SRM Institute of Science and Technology · GPA: 9.5 / 10 · Sep 2021 - Jun 2025
+    </span>
+
+    <div class="toggle-section">
+      <button class="toggle-btn toggle-section-btn">Show Details ↓</button>
+
+      <div class="toggle-section-content hidden">
+        <p>
+          <b>Relevant Coursework:</b> Data Structures, Design and Analysis of Algorithms,
+          Object Oriented Design and Programming, Database Management Systems,
+          Artificial Intelligence, Computer Architectures, Operating Systems,
+          Computer Networks.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Foundational Degree in Data Science and Programming</h3>
+    <span>IIT Madras · GPA: 7.9 / 10 · Jan 2021 - Jan 2022</span>
+
+    <div class="toggle-section">
+      <button class="toggle-btn toggle-section-btn">Show Details ↓</button>
+
+      <div class="toggle-section-content hidden">
+        <p>
+          <b>Relevant Coursework:</b> Vector Spaces, Linear Transforms, Estimation,
+          Hypothesis Testing, Likelihood and Probability, Python Fundamentals,
+          Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="Experience">
         <h2>Experience</h2>
         <div class="card">
-          <h3>Teaching Assistant</h3>
+          <h3>Graduate Teaching Assistant</h3>
           <span> University of Ottawa · Jan 2026 - Apr 2026 </span>
           <p>
             <strong>Course:</strong>
@@ -106,76 +165,149 @@
             </li>
           </ul>
         </div>
-
         <div class="card">
           <h3>Junior Engineer Trainee</h3>
           <span>Acxhange India Pvt Ltd · Mar 2025 – Aug 2025</span>
-          <ul>
-            <li>
-              Developed responsive UI components using Angular (v16–v19),
-              TypeScript, and CSS.
-            </li>
-            <li>
-              Integrated REST APIs and implemented secure authentication with
-              MSAL and ForgeRock.
-            </li>
-            <li>
-              Worked on kognitiveWorks, an AI-driven insurance and legal
-              document automation platform.
-            </li>
-          </ul>
+          <div class="experience-toggle">
+            <p class="summary" style="text-align: justify">
+              Developed scalable, high-performance front-end systems using
+              Angular and TypeScript, integrating FastAPI services with AWS
+              DynamoDB for efficient data workflows. Implemented secure
+              authentication (MSAL, ForgeRock) and optimized UI performance,
+              accessibility, and maintainability, including framework migration.
+              Supported Jenkins-based CI/CD pipelines and collaborated in agile
+              teams to deliver reliable, production-grade applications.
+            </p>
+
+            <button class="toggle-btn">Show Details ↓</button>
+
+            <ul class="details hidden">
+              <li>
+                Engineered reusable, performance-optimized UI components using
+                Angular (v16–v19) and TypeScript, including framework migration
+                to improve build efficiency and maintainability.
+              </li>
+              <li>
+                Integrated FastAPI-backed services with AWS DynamoDB for
+                low-latency, consistent data workflows.
+              </li>
+              <li>
+                Implemented secure authentication using MSAL and ForgeRock for
+                enterprise-grade SSO.
+              </li>
+              <li>
+                Applied reactive programming techniques to improve UI
+                performance and accessibility.
+              </li>
+              <li>
+                Supported Jenkins-based CI/CD pipelines for automated build,
+                testing, and deployment.
+              </li>
+              <li>
+                Collaborated in agile teams to deliver scalable,
+                production-ready features.
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div class="card">
           <h3>Graduate Intern</h3>
           <span>Acxhange India Pvt Ltd · Sep 2024 – Mar 2025</span>
-          <ul>
-            <li>Improved dashboard performance and UI responsiveness.</li>
-            <li>
-              Contributed to enterprise-level data visualization features.
-            </li>
-          </ul>
+          <div class="experience-toggle">
+            <p class="summary" style="text-align: justify">
+              Developed modular, high-performance dashboard interfaces using
+              Angular and TypeScript, integrating RESTful services for efficient
+              data flow and state management. Implemented secure authentication
+              (MSAL, ForgeRock) and optimized rendering performance and UI
+              responsiveness. Enhanced data visualization and usability through
+              targeted UI/UX improvements, while collaborating in agile teams to
+              deliver maintainable, production-ready features.
+            </p>
+
+            <button class="toggle-btn">Show Details ↓</button>
+
+            <ul class="details hidden">
+              <li>
+                Developed modular, responsive UI components for enterprise
+                dashboards using Angular and TypeScript, improving
+                maintainability and consistency.
+              </li>
+              <li>
+                Integrated RESTful services to enable efficient client-server
+                communication, asynchronous data retrieval, and state
+                synchronization.
+              </li>
+              <li>
+                Implemented secure authentication using MSAL and ForgeRock for
+                enterprise-grade SSO.
+              </li>
+              <li>
+                Optimized rendering performance and enhanced UI responsiveness
+                across data-intensive views.
+              </li>
+              <li>
+                Improved data visualization workflows and applied UI/UX
+                refinements to enhance usability and user interaction.
+              </li>
+              <li>
+                Collaborated within agile teams, contributing to code quality,
+                structured development, and iterative feature delivery.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section>
+      <section id="Skills">
         <h2>Skills</h2>
         <div class="skills">
           <div class="card skill-group">
             <div class="skill-content">
               <h4>Web Technologies</h4>
-              <p>Angular, HTML, CSS, REST APIs</p>
+              <p>
+                Angular, HTML, CSS, REST APIs, FastAPI, Node.js, Vue.js,
+                ExpressJs
+              </p>
             </div>
             <div class="skill-icons">
               <i class="devicon-angularjs-plain colored"></i>
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-postman-plain colored"></i>
+              <i class="devicon-nodejs-plain-wordmark colored"></i>
+              <i class="devicon-fastapi-plain colored"></i>
+              <i class="devicon-vuejs-plain-wordmark colored"></i>
+
+              <i class="devicon-express-original-wordmark colored"></i>
             </div>
           </div>
           <div class="card skill-group">
-              <div class="skill-content">
-                <h4>Programming</h4>
-                <p>Python, TypeScript, JavaScript, SQL, C, C++, Java</p>
-              </div>
-              <div class="skill-icons">
-                <i class="devicon-python-plain colored"></i>
-                <i class="devicon-typescript-plain colored"></i>
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-cplusplus-plain colored"></i>
-                <i class="devicon-c-plain colored"></i>
-                <i class="devicon-java-plain colored"></i>
-              </div>
+            <div class="skill-content">
+              <h4>Programming</h4>
+              <p>Python, TypeScript, JavaScript, SQL, C, C++, Java</p>
+            </div>
+            <div class="skill-icons">
+              <i class="devicon-python-plain colored"></i>
+              <i class="devicon-typescript-plain colored"></i>
+              <i class="devicon-javascript-plain colored"></i>
+              <i class="devicon-cplusplus-plain colored"></i>
+              <i class="devicon-c-plain colored"></i>
+              <i class="devicon-java-plain colored"></i>
+            </div>
           </div>
           <div class="card skill-group">
             <div class="skill-content">
               <h4>Tools & Frameworks</h4>
-              <p>Git, MSAL, ForgeRock</p>
+              <p>Git, MSAL, ForgeRock, Visual Studio, Docker, Jenkins</p>
             </div>
             <div class="skill-icons">
               <i class="devicon-git-plain colored"></i>
-              <!-- <i class="devicon-angularjs-plain colored"></i> -->
               <i class="fa-solid fa-shield-halved security-icon"></i>
               <span class="tool-badge">ForgeRock</span>
+              <i class="devicon-docker-plain colored"></i>
+              <i class="devicon-jenkins-plain colored"></i>
+              <i class="devicon-vscode-plain colored"></i>
             </div>
           </div>
           <div class="card skill-group">
@@ -188,10 +320,43 @@
               <i class="devicon-amazonwebservices-plain colored"></i>
             </div>
           </div>
+          <div class="card skill-group">
+          <div class="skill-content">
+            <h4>Data Analysis & Visualization</h4>
+            <p>Pandas, NumPy, Seaborn, Tableau</p>
+          </div>
+          <div class="skill-icons">
+            <i class="devicon-pandas-plain colored"></i>
+            <i class="devicon-numpy-plain colored"></i>
+            <span class="tool-badge">SeaBorn</span>
+            <span class="tool-badge">Tableau</span>
+          </div>
+        </div>
+
+        <div class="card skill-group">
+          <div class="skill-content">
+            <h4>Machine Learning & Deep Learning</h4>
+            <p>PyTorch, TensorFlow, Keras, Scikit-learn, JAX, CUDA</p>
+          </div>
+          <div class="skill-icons">
+            <i class="devicon-pytorch-original colored"></i>
+            <i class="devicon-tensorflow-original colored"></i>
+            <i class="devicon-keras-plain colored"></i>
+            <i class="devicon-scikitlearn-plain colored"></i>
+            <i class="devicon-jupyter-plain colored"></i>
+            <i class="devicon-nvidia-plain colored"></i>
+            <span class="tool-badge">JAX</span>
+          </div>
+        </div>
+        <div class="card skill-group no-hover">
+          <div class="skill-content">
+            <h4>Neural Network Architectures</h4>
+            <p>LSTM, RNN, CNN, TCN and GAN</p>
+          </div>
         </div>
       </section>
 
-      <section>
+      <section id="Volunteering">
         <h2>Leadership & Volunteering</h2>
         <div class="card">
           <h3>Co-Founder & Head of Design</h3>
@@ -208,7 +373,7 @@
           </ul>
         </div>
       </section>
-      <section>
+      <section id="Projects">
         <h2>Projects</h2>
 
         <div class="card project-card">
@@ -216,32 +381,52 @@
             Adapting Ford–Fulkerson for Min-Cost Max-Flow and Multi-Commodity
             Flow
           </h3>
-          <p>
+          <div class="experience-toggle">
+          <p class="summary" style="text-align: justify">
             Explored algorithmic adaptations of the Ford–Fulkerson method to
             handle min-cost max-flow and multi-commodity flow problems. Focused
             on scalability, performance analysis, and theoretical correctness.
           </p>
-
+          <button class="toggle-btn">Show Details ↓</button>
+          <div class="details hidden">
+          <section style="text-align: justify">
+            Developed a deep learning based energy forecasting system using Temporal Convolutional Networks (TCNs) to model both
+noisy, weather-driven and seasonal time-series data. Compared performance against LSTM, GRU, and MLP baselines,
+demonstrating superior accuracy and stability. Implemented feature engineering, sliding window modeling, and SHAPbased
+interpretability to analyze model behavior, highlighting TCN effectiveness in capturing temporal dependencies and
+improving forecasting reliability.
+          </section>
           <a
             href="https://github.com/Vibrance1706/Adapting-Ford-Fulkerson-for-Min-Cost-Max-Flow-and-Multi-Commodity-Flow-Problems.git"
             target="_blank"
-            class="project-link"
+            class="project-link details"
           >
             View on GitHub →
           </a>
+          </div>
+          </div>
         </div>
 
         <div class="card project-card">
           <h3>
             Energy Consumption Forecasting using Temporal Convolutional Networks
           </h3>
-          <p>
+          <div class="experience-toggle">
+          <p class="summary" style="text-align: justify">
             Built a deep learning–based forecasting model using Temporal
             Convolutional Networks (TCN) to predict energy consumption trends
             from historical time-series data, focusing on accuracy and temporal
             dependencies.
           </p>
-
+          <button class="toggle-btn">Show Details ↓</button>
+          <div class="details hidden">
+            <section style="text-align: justify">
+            Explored network flow optimization by adapting the Ford–Fulkerson algorithm to solve Min-Cost Max-Flow and Multi-
+Commodity Flow problems. Implemented and benchmarked a modified FF-based approach against an LP-based solution
+(PuLP) using synthetic graph data with configurable parameters. Evaluated performance using runtime, speedup, and
+optimality gap metrics, highlighting trade-offs between computational efficiency and solution accuracy. Demonstrated the
+effectiveness of heuristic-based flow algorithms for scalable network optimization scenarios.
+          </section>
           <a
             href="https://github.com/Vibrance1706/EnergyConsumption-Forecasting-using-Temporal-Convolutional-Networks.git"
             target="_blank"
@@ -249,23 +434,24 @@
           >
             View on GitHub →
           </a>
+          </div>
         </div>
+          <div class="experience-toggle">
+
       </section>
 
-      <section>
+      <section id="Certifications">
         <h2>Certifications & Exams</h2>
         <div class="card">
           <ul>
             <li>IELTS Academic – Band 7.5 (C1)</li>
             <li>GRE – 317 / 340</li>
-            <li>DELF A2 – Alliance Française</li>
+            <li>DELF B1 – Alliance Française</li>
           </ul>
         </div>
       </section>
     </div>
-
     <footer>© 2025 Vishal Meenakshi Sundaram · Ottawa, Canada</footer>
-
     <script src="app.js"></script>
   </body>
 </html>
